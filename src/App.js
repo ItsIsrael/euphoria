@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import {useState} from 'react';
 import './App.css';
-
+import RoutesDinamic from './routes';
+import MenuNav from './layouts/Navbar';
+import 'react-chatbot-kit/build/main.css'
 function App() {
+  const [loading, setLoading] = useState(false)
+const spinner = document.getElementById('spinner');
+if (spinner) {
+    setTimeout(() => {
+      spinner.style.display = "none";
+      setLoading(false);
+    }, 6000);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    !loading &&  (
+      <>
+    <MenuNav />
+    <RoutesDinamic />
+    </>)
+    
   );
 }
 
