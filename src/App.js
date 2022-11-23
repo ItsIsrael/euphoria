@@ -12,7 +12,7 @@ if (spinner) {
     setTimeout(() => {
       spinner.style.display = "none";
       setLoading(false);
-    }, 3000);
+    }, 5000);
   }
 
   return (

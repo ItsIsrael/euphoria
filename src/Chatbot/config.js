@@ -5,16 +5,11 @@ const botName = 'Phorya';
 
 const config = {
   initialMessages: [createChatBotMessage(`Hola, Mi nombre es ${botName}, es un placer poder ayudarte.
-  Introduce un numero: 
-  1- Ayuda
-  2- Soporte Tecnicó
-  3- Nuestras novedades
-  4- 
   `)],
   botName: botName,
   customStyles: {
     botMessageBox: {
-      backgroundColor: '#EE82EE',
+      backgroundColor: '#0e1129',
     },
     chatButton: {
       backgroundColor: 'green',

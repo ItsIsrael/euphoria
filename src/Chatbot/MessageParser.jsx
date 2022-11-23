@@ -7,7 +7,7 @@ const parse = (message) => {
       actions.handleHello();
     }
 
-    if(message.includes('1') | message.includes(1)){
+    if(message.includes('help') | message.includes('Help')){
       actions.option1();
     }
 

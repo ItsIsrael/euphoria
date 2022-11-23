@@ -1,4 +1,3 @@
-// new file called DogPicture.jsx
 import React, { useEffect, useState } from 'react';
 
 const DogPicture = () => {

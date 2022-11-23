@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
@@ -12,7 +13,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   };
 
   const option1 = ()=> {
-    const botMessage = createChatBotMessage('Ingresa a la siguiente dirección.' );
+    const botMessage = createChatBotMessage('Dirigete a ' );
         setState((prev) => ({
       ...prev,
       messages: [...prev.messages, botMessage],

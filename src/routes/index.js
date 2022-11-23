@@ -8,6 +8,7 @@ import Home from "../pages/Home/Home";
 import NotFound from "../pages/Home/404";
 import Login from "../components/Login/Login";
 import ModeloCavas from "../components/More/More";
+import Examples from "../pages/Examples/Examples";
 
 const RoutesDinamic = () => {
   return (
@@ -19,7 +20,7 @@ const RoutesDinamic = () => {
           <Route path="/contacto" element={ <Contact />} />
           <Route path="/merchandising" element={ <Merchandising/>} />
           <Route path="/more" element={<ModeloCavas /> } />
-          <Route path="/example" element={<ModeloCavas /> } />
+          <Route path="/examples" element={<Examples /> } />
           <Route path="/login" element={ <Login />} />
           <Route path="*" element={<NotFound />}/>
       </Routes>

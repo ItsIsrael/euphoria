@@ -6,7 +6,7 @@ import mision from "../../images/mision.jpg";
 import styled from "styled-components";
 const About = () => {
   return (
-    <>
+    <Background>
       <ContainerAbout>
         <main>
           <img src={mision} alt=" Cual es nuestra misión" />
@@ -63,7 +63,7 @@ const About = () => {
         </main>
       </ContainerAbout>
       <Footer>
-        <div >
+        <div>
           <h2>
             Conozca nuestra Responsabilidad <br></br>Social coorporativa
           </h2>
@@ -84,18 +84,33 @@ const About = () => {
           </Link>
         </div>
       </Footer>
-    </>
+    </Background>
   );
 };
 
 export default About;
 
+const Background = styled.main`
+  background-color: #0e1129;
+  width: 100%;
+  height: 100%;
+  color: aliceblue;
+`;
 const ContainerAbout = styled.main`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
-  margin: 10px;
+
   text-align: justify;
+  main {
+    background: rgba( 255, 255, 255, 0.10 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+padding: 10px;
+  }
   .content-reverse {
     display: flex;
     flex-direction: column-reverse;
@@ -125,10 +140,10 @@ const ContainerAbout = styled.main`
 `;
 
 const Footer = styled.footer`
-display: flex;
-align-items: center;
-justify-content: center;
-  div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  div {
     width: 60%;
     text-align: justify;
     margin: 20px;

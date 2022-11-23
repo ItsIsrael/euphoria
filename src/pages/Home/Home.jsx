@@ -15,7 +15,6 @@ import ChatbotComponent from "../../Chatbot/chatbot";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Model from "../Model/Model";
-import RedesSociales from "../../layouts/Redes";
 const Home = () => {
   const plantillas = [
     {
@@ -72,10 +71,10 @@ const Home = () => {
           value={{
             className: "chat-class",
           }}
-        >
+        ><span className={`${!open ? "notification" : ""}`}></span>
           <button onClick={handleClick}>
-          { !open ? <AiOutlineWechat /> : <BsFillXCircleFill /> }
-            <span className={`${!open ? "notification" : ""}`}></span>
+            {!open ? <AiOutlineWechat /> : <BsFillXCircleFill />}
+            
           </button>
           {open && (
             <div className="chat-component">
@@ -121,8 +120,55 @@ const Home = () => {
           <HiArrowSmRight />
         </Link>
       </Page2>
-      <Page3></Page3>
-      <RedesSociales />
+      <Page3>
+        <h1>FAQ</h1>
+        <h1></h1>
+        <h4>
+          <hr></hr>
+          ¿Es fácil crear una página web?
+        </h4>
+        <p>
+          <hr></hr>
+          Sí. ofrecemos diferentes maneras de crear tu propia página web de
+          forma gratuita, por lo que puedes elegir el proceso de creación que
+          más te convenga. ¿Necesitas estar en línea rápidamente? Responde a
+          unas simples preguntas y <b>Euphoria ADI </b> (Artificial Design Intelligence)
+          construirá un sitio web profesional para ti en menos de 10 minutos.
+        </p>
+        <h4>
+          <hr></hr>
+          ¿Puedo crear un sitio web sin saber programación?
+        </h4>
+        <p>
+          <hr></hr>
+          Sí, claro es fácil de usar y hace posible crear un sitio web
+          profesional sin tener conocimientos de programación. En el Editor de
+          , puedes arrastrar y soltar cualquier función que desees y
+          personalizarla para que coincida con el aspecto de tu sitio.
+        </p>
+        <h4>
+          <hr></hr>
+          ¿Cómo hago que mi página sea compatible con dispositivos móviles?
+        </h4>
+        <p>
+          <hr></hr>
+          Tu página web de Wix viene automáticamente con una versión optimizada
+          para móviles que se ve muy bien en pantallas pequeñas. 
+        </p>
+
+        <h4>
+          <hr></hr>
+          ¿Cómo puedo crear una página web gratuita con un dominio
+          personalizado?
+        </h4>
+        <p>
+          <hr></hr>
+          Puedes crear una página web gratuita , la cual viene con un
+          dominio euphoria. Para tener un aspecto más profesional online, obtén un
+          nombre de dominio personalizado. Añade credibilidad a tu marca y ayuda
+          a los visitantes a encontrarte online. 
+        </p>
+      </Page3>
     </ContainerAll>
   );
 };
@@ -177,6 +223,9 @@ const ContainerAll = styled.main`
     right: 0;
     @media (max-width: 600px) {
       top: 680px;
+    }
+        @media (max-width: 1200px) {
+      top: 980px;
     }
   }
 `;
@@ -373,6 +422,7 @@ const Page2 = styled.main`
 const Page3 = styled.div`
   background-color: #0e1129;
   color: white;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
 `;
-
