@@ -51,7 +51,7 @@ const Home = () => {
   return (
     <ContainerAll>
       <Wrapper>
-        {/* <Canvas
+        <Canvas
           camera={{ position: [2, 0, 12.25], fov: 12 }}
           style={{
             backgroundColor: "#0e1129",
@@ -67,7 +67,7 @@ const Home = () => {
           <Suspense fallback={null}>
             <Model position={[0.025, -0.9, 3]} />
           </Suspense>
-        </Canvas> */}
+        </Canvas>
         <IconContext.Provider
           value={{
             className: "chat-class",

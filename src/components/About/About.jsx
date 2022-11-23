@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import vision from "../../images/vision.jpg";
 import valores from "../../images/valores.jpg";
 import mision from "../../images/mision.jpg";
-import banner from "../../images/responsabilidad-social-banner.jpg";
 import styled from "styled-components";
 const About = () => {
   return (

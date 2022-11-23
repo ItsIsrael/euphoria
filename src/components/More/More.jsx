@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import modelCanvas from "../../images/assets/euphoria-canvas-listo.png";
 const ModeloCavas = () => {

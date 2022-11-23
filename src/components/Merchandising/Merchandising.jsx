@@ -1,6 +1,4 @@
 import React from 'react'
-import ChatbotComponent from '../../Chatbot/chatbot'
-
 
 const Merchandising = () => {
 
