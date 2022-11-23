@@ -307,7 +307,7 @@ const ContainerServices = styled.main`
   }
 
   .etiquet-price p:after {
-    content: "20% OFF";
+    content: "50% OFF";
     margin-left: 5px;
     font-size: 15px;
     font-weight: 300;

@@ -25,7 +25,7 @@ function Login() {
   };
   return (
     <Main>
-      <MDBContainer className="p-3 my-5 d-flex flex-column w-50 container">
+      <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
         <Link className="logo-container" to="/">
           <img src={logoWithText} alt="Euphoria-logo" className="logo" />
         </Link>
@@ -85,7 +85,7 @@ function Login() {
                   className="m-1"
                   style={{ color: "#1266f1" }}
                 >
-                  <FaGoogle/>
+                  <FaGoogle />
                 </MDBBtn>
 
                 <MDBBtn
@@ -217,8 +217,9 @@ function Login() {
 export default Login;
 
 const Main = styled.main`
-  /* background-color: #0e1129; */
-
+  background-color: aliceblue;
+  width: 100%;
+  height: 100%;
   .container {
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
