@@ -2,11 +2,10 @@
   width: 100%;
   height: 70px;
   display: flex;
-  background: transparent;
   align-items: center;
   color: white;
   background-color: #0e1129;
-  position: fixed;
+  position: sticky;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
@@ -74,7 +73,7 @@ li a {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 70px;
+    top: 120px;
     gap: 20px;
     width: 90%;
     height: 60vh;
