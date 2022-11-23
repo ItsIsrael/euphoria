@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { HiArrowSmRight } from "react-icons/hi";
 import { AiOutlineWechat } from "react-icons/ai";
 import { IconContext } from "react-icons";
+import { BsFillXCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-// import Spline from "@splinetool/react-spline";
 import blog from "../../images/plantillas/blog.jpg";
 import negocios from "../../images/plantillas/negocios.jpg";
 import tienda from "../../images/plantillas/tienda.jpg";
@@ -12,10 +12,10 @@ import diseño from "../../images/plantillas/diseño.jpg";
 import portafolio from "../../images/plantillas/portafolio.jpg";
 import landing from "../../images/plantillas/landing.jpg";
 import ChatbotComponent from "../../Chatbot/chatbot";
-
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Model from "../Model/Model";
+import RedesSociales from "../../layouts/Redes";
 const Home = () => {
   const plantillas = [
     {
@@ -51,13 +51,13 @@ const Home = () => {
   return (
     <ContainerAll>
       <Wrapper>
-        <Canvas
-          camera={{ position: [2, 0, 12.25], fov: 13 }}
+        {/* <Canvas
+          camera={{ position: [2, 0, 12.25], fov: 12 }}
           style={{
             backgroundColor: "#0e1129",
             position: "absolute",
-            right: "0",
-            width: "50vw",
+            left: "450px",
+            width: "70%",
             height: "90vh",
           }}
         >
@@ -67,15 +67,14 @@ const Home = () => {
           <Suspense fallback={null}>
             <Model position={[0.025, -0.9, 3]} />
           </Suspense>
-          {/* <OrbitControls /> */}
-        </Canvas>
+        </Canvas> */}
         <IconContext.Provider
           value={{
             className: "chat-class",
           }}
         >
           <button onClick={handleClick}>
-            <AiOutlineWechat />
+          { !open ? <AiOutlineWechat /> : <BsFillXCircleFill /> }
             <span className={`${!open ? "notification" : ""}`}></span>
           </button>
           {open && (
@@ -123,9 +122,7 @@ const Home = () => {
         </Link>
       </Page2>
       <Page3></Page3>
-      <Footer>
-        <p>© 2022 EUPHORIA S.L. All rights reserved</p>
-      </Footer>
+      <RedesSociales />
     </ContainerAll>
   );
 };
@@ -154,6 +151,7 @@ const ContainerAll = styled.main`
     right: 0;
     animation-name: showChat;
     animation-duration: 120ms;
+    background-color: transparent;
 
     @keyframes showChat {
       0% {
@@ -378,9 +376,3 @@ const Page3 = styled.div`
   display: flex;
 `;
 
-const Footer = styled.footer`
-  text-align: center;
-  background-color: #0e1129;
-  color: white;
-  padding: 40px;
-`;

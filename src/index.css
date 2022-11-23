@@ -5,6 +5,11 @@
   box-sizing: border-box;
   user-select: none;
 }
+a:hover{
+color: rgb(3, 219, 219);
+}
 
-
+h1, h2{
+      font-family: 'Cinzel Decorative', cursive;
+}
 

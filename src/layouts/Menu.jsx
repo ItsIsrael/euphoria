@@ -8,7 +8,7 @@ const headersData = [
     id: "/",
   },
   {
-    label: "Acerca de",
+    label: "Conócenos",
     id: "acerca-de",
   },
   {
@@ -21,7 +21,16 @@ const headersData = [
   },  {
     label: "Merchandising",
     id: "Merchandising",
-  }, {
+  },
+  {
+    label: "Examples",
+    id: "Examples",
+  },
+  {
+    label: "More",
+    id: "More",
+  },
+  {
     label: "Login",
     id: "Login",
   },
@@ -34,7 +43,7 @@ const handleClick = () =>{
       headersData.map((item) => {
         return (
           <li className='nav-item ' key={item.id}>
-            <NavLink className={({isActive}) => isActive ? 'active': ''}
+            <NavLink className={({isActive}) => isActive ? 'active-link': ''}
             onClick={handleClick} to={item.id}>{item.label}</NavLink>
           </li>
         );

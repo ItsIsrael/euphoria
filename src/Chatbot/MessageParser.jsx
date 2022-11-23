@@ -6,6 +6,11 @@ const parse = (message) => {
       console.log('hi');
       actions.handleHello();
     }
+
+    if(message.includes('1') | message.includes(1)){
+      actions.option1();
+    }
+
         if (message.includes('dog')) {
       actions.handleDog();
     }

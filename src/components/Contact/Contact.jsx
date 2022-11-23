@@ -26,7 +26,7 @@ const Contact = () => {
                 <VscWatch />
                 Horario
               </h2>
-              <p>Lunes a viernes 10am a 7pm"</p>
+              <p>Lunes a viernes 10am a 7pm</p>
             </div>
 
             <div className="content-icons">
@@ -76,7 +76,6 @@ const ContactLeft = styled.main`
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       width: 100%;
-      place-items: center;
       .content-icons {
         display: flex;
         flex-direction: column;

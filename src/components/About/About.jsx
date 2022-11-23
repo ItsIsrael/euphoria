@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import vision from "../../images/vision.jpg";
 import valores from "../../images/valores.jpg";
 import mision from "../../images/mision.jpg";
@@ -11,7 +12,7 @@ const About = () => {
         <main>
           <img src={mision} alt=" Cual es nuestra misión" />
           <div>
-            <h1>Misión</h1>
+            <h1>Nuestra Misión</h1>
             <p>
               Nuestro objetivo es enriquecer la comunicación digital de las
               empresas en internet. Por ello nuestra misión se basa en los
@@ -44,29 +45,44 @@ const About = () => {
             <p>
               El cliente es lo primero trabajamos con el propósito de cumplir
               sus exigencias. Nuestro desarrollo va de la mano del éxito que
-              obtengan nuestros clientes a través de nuestro trabajo. 
-              Su éxito es nuestro éxito. <br></br>
-              <b>Dedicación:</b> gracias a una dedicación diaria y
-              constante nos hemos ganado la confianza de nuestros clientes. Nos
-              preocupamos por ellos y por sus necesidades. <br></br>
-              <b>Formación e innovación continua:</b> somos conocedores de que el mundo digital
-              está en constante evolución. Mensualmente contactamos con todos
-              nuestros clientes para escuchar novedades y nuevas situaciones.<br></br>
-              <b>Integridad: </b>mantenemos todo lo
-              que decimos sin crear falsas expectativas. <br></br>
-              <b>Trabajo en equipo:</b> este
-              es nuestro valor más importante para poder garantizar el resto.
-              Fusionamos los conocimientos de todo el equipo en un resultado
-              final.
+              obtengan nuestros clientes a través de nuestro trabajo. Su éxito
+              es nuestro éxito. <br></br>
+              <b>Dedicación:</b> gracias a una dedicación diaria y constante nos
+              hemos ganado la confianza de nuestros clientes. Nos preocupamos
+              por ellos y por sus necesidades. <br></br>
+              <b>Formación e innovación continua:</b> somos conocedores de que
+              el mundo digital está en constante evolución. Mensualmente
+              contactamos con todos nuestros clientes para escuchar novedades y
+              nuevas situaciones.<br></br>
+              <b>Integridad: </b>mantenemos todo lo que decimos sin crear falsas
+              expectativas. <br></br>
+              <b>Trabajo en equipo:</b> este es nuestro valor más importante
+              para poder garantizar el resto. Fusionamos los conocimientos de
+              todo el equipo en un resultado final.
             </p>
           </div>
         </main>
       </ContainerAbout>
       <Footer>
-        <img src={banner} alt="Baner Responsabilidad social coorporativa" />
-        <div>
-          <h2>Conozca nuestra Responsabilidad <br></br>Social coorporativa</h2>
-          <button>REsponsabilidad</button>
+        <div >
+          <h2>
+            Conozca nuestra Responsabilidad <br></br>Social coorporativa
+          </h2>
+          <p>
+            En el ámbito social, tras haber alcanzado unos objetivos
+            financieros, la empresa procurará enviar el 20% de los beneficios a
+            organizaciones de ayuda para solucionar la pobreza y hambre en el
+            mundo. También ayudaremos a los más jóvenes a aprender a programar
+            en páginas web con nuestros cursillos
+          </p>
+          <p>
+            En el ámbito medioambiental, la empresa colabora en la reducción de
+            CO2 en la atmósfera al ser una empresa que no necesita envio ni
+            recibo de mercancías debido a que trabajamos 100% online{" "}
+          </p>
+          <Link to="/error" className="btn btn-primary">
+            Conoce más...
+          </Link>
         </div>
       </Footer>
     </>
@@ -78,7 +94,7 @@ export default About;
 const ContainerAbout = styled.main`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 60px;
+  grid-gap: 20px;
   margin: 10px;
   text-align: justify;
   .content-reverse {
@@ -99,7 +115,7 @@ const ContainerAbout = styled.main`
     main {
       display: flex;
       flex-direction: row;
-      gap: 20px;
+      gap: 10px;
       align-items: center;
       img {
         max-width: 600px;
@@ -110,15 +126,12 @@ const ContainerAbout = styled.main`
 `;
 
 const Footer = styled.footer`
-position: relative;
-display: inline-block;
-  div {
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-  }
-  img {
-    width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+  div{
+    width: 60%;
+    text-align: justify;
+    margin: 20px;
   }
 `;

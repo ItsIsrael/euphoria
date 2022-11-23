@@ -11,8 +11,8 @@ const ChatbotComponent = () => {
         config={config}
         messageParser={MessageParser}
         actionProvider={ActionProvider}
-        headerText="Asistente"
-        placeholderText="Introduzca un texto."
+        headerText="Asistente personal"
+        placeholderText="Introduzca una respuesta."
       />
     </div>
   );

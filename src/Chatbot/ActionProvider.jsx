@@ -11,6 +11,13 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   };
 
+  const option1 = ()=> {
+    const botMessage = createChatBotMessage('Ingresa a la siguiente dirección.' );
+        setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  }
   const handleDog = () => {
     const botMessage = createChatBotMessage(
       "Here's a nice dog picture for you!",
@@ -25,6 +32,13 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   };
 
+  const notFound = ()=>{
+    const botMessage = createChatBotMessage('No he podido encontrar una respuesta, intenta de nuevo.')
+        setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    })); 
+  }
 
   return (
     <div>
@@ -32,7 +46,9 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         return React.cloneElement(child, {
           actions: {
             handleHello,
-            handleDog
+            handleDog,
+            option1,
+            notFound
           },
         });
       })}
