@@ -13,7 +13,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   };
 
   const option1 = ()=> {
-    const botMessage = createChatBotMessage('Dirigete a ' );
+    const botMessage = createChatBotMessage('Dirigete a https://euphoria.onrender.com/help' );
         setState((prev) => ({
       ...prev,
       messages: [...prev.messages, botMessage],
